@@ -1,0 +1,130 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Vertical Tabs - Admin Interface */
+.admin-tabs {
+    @apply flex flex-col space-y-1 p-2 bg-gray-50 rounded-lg;
+}
+
+.admin-tab {
+    @apply px-4 py-3 rounded-md transition-colors duration-200;
+    @apply text-gray-700 hover:bg-gray-200 hover:text-gray-900;
+    @apply flex items-center space-x-2;
+}
+
+.admin-tab.active {
+    @apply bg-blue-100 text-blue-800 font-medium;
+    @apply border-l-4 border-blue-500;
+}
+
+.admin-tab-icon {
+    @apply w-5 h-5;
+}
+
+/* Table Styles */
+.admin-table {
+    @apply min-w-full divide-y divide-gray-200;
+}
+
+.admin-table th {
+    @apply px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider;
+}
+
+.admin-table td {
+    @apply px-6 py-4 whitespace-nowrap text-sm text-gray-900;
+}
+
+/* Status Badges */
+.status-badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+}
+
+.status-pending {
+    @apply bg-yellow-100 text-yellow-800;
+}
+
+.status-completed {
+    @apply bg-green-100 text-green-800;
+}
+
+/* Modal Enhancements */
+.modal-detail {
+    @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4;
+}
+
+.modal-content {
+    @apply bg-white rounded-lg shadow-xl max-w-2xl w-full;
+}
+
+.modal-header {
+    @apply bg-blue-600 text-white px-6 py-4 rounded-t-lg flex justify-between items-center;
+}
+
+.modal-body {
+    @apply p-6;
+}
+
+/* Responsive Grid for Admin Dashboard */
+.admin-grid {
+    @apply grid grid-cols-1 lg:grid-cols-4 gap-6;
+}
+
+.admin-main-content {
+    @apply lg:col-span-3;
+}
+
+/* Button Styles */
+.btn-admin {
+    @apply px-4 py-2 rounded-md text-sm font-medium transition-colors;
+}
+
+.btn-primary {
+    @apply bg-blue-600 text-white hover:bg-blue-700;
+}
+
+.btn-danger {
+    @apply bg-red-600 text-white hover:bg-red-700;
+}
+
+.btn-success {
+    @apply bg-green-600 text-white hover:bg-green-700;
+}
+
+/* Form Inputs */
+.admin-input {
+    @apply mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500;
+}
+
+/* Pagination Styles */
+.pagination {
+    @apply flex justify-between items-center mt-4;
+}
+
+.pagination-info {
+    @apply text-sm text-gray-700;
+}
+
+.pagination-links {
+    @apply flex space-x-2;
+}
+
+.pagination-link {
+    @apply px-3 py-1 rounded-md border border-gray-300 text-sm;
+}
+
+.pagination-link.active {
+    @apply bg-blue-600 text-white border-blue-600;
+}
