@@ -17,8 +17,3 @@ A simple CRUD application built with Laravel.
 - PHP 7.3+ 
 - Composer 
 - MySQL/SQLite
-
-### Steps:
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/MyKyo/Laravel-Crud.git
